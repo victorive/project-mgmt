@@ -1,0 +1,79 @@
+
+/*====================== HOME PAGE STYLES*/
+.navbar-brand i{
+	margin-left: 15px;
+	color: #4A69FD;
+	font-weight: bold;
+}
+
+.navbar-brand i span{
+	color: #FF3040;
+}
+
+.home-text p{
+	padding: 3% 10%;
+	font-size: 18px;
+	font-style: italic;
+}
+
+.homelog a{
+	border: 1px solid #DE071D;
+	padding: 8px 50px;
+	margin:0 10px;
+	/*color: black;*/
+	font-weight: bold;
+	border-radius: 5px;
+	text-decoration: none;
+}
+
+.loginbtn{
+	background-color: #FF3040;
+	color: white;
+	transition: 0.5s;
+}
+
+.loginbtn:hover{
+	color: white;
+	box-shadow: 5px 5px 5px grey;
+}
+
+.regbtn{
+	border: 1px solid #FF3040;
+	color: #FF3040;
+	transition: 0.5s;
+}
+
+.regbtn:hover{
+	box-shadow: 5px 5px 5px grey;
+	color: #FF3040;
+}
+
+
+/*===========================   LOGIN STYLES===================*/
+
+.loginpg-cont{
+	height: 590px;
+}
+
+.loginform-cont{
+	border: 1px solid grey;
+	border-radius: 5px;
+	box-shadow: 5px 5px 5px #ddd;
+}
+
+.loginpg-btn .loginbtn{
+	display: block;
+	padding: 5px 0;
+	border-radius: 5px;
+}
+
+/*================== PROFILE ====*/
+
+.profile-input div input{
+	width: 100%;
+	border-radius:5px;
+	border:none;
+	padding: 5px;
+	border:1px solid grey;
+	outline:none;
+}
