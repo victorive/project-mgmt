@@ -50,4 +50,5 @@ class ResourceController extends Controller
     public function destroy(){
         
     }
+    //
 }
