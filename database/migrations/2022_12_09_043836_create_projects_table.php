@@ -17,12 +17,6 @@ return new class extends Migration
             $table->id();
             $table->string('project');
             $table->date('end_date');
-            $table->string('subtask');
-            $table->string('stage_one');
-            $table->string('stage_two');
-            $table->string('stage_three');
-            $table->string('stage_four');
-            $table->string('description');
             $table->date('start_date');
             $table->foreignId('client_id')->constrained('clients')->onDelete('cascade');
             $table->timestamps();

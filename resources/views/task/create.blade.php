@@ -17,16 +17,8 @@
                         @enderror
                     </div>
 
-                    <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Task description*</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="description" id="" placeholder="Task description"/>
-                        @error('description')
-                        <span class="block text-xs font-medium text-red-500">{{ $message }}</span>
-                        @enderror
-                    </div>
-  
                     <div class="flex flex-col sm:col-span-3">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Project*</label>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Project Name*</label>
                         <select class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="project_id" id="">
                             @if (count($projects) != 0)
 
@@ -45,15 +37,18 @@
                         @enderror
                     </div>
 
-                    <div class="col-span-1 flex flex-col">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Status*</label>
-                        <select class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="status" id="">
-                            <option value="Pending">Pending</option>
-                            <option value="In progress">In progress</option>
-                            <option value="Review">Review</option>
-                            <option value="Completed">Completed</option>
-                        </select>
-                        @error('status')
+                    <div class="col-span-2 flex flex-col">
+                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Start date*</label>
+                        <input type="date" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="start_date" id=""/>
+                        @error('start_date')
+                        <span class="block text-xs font-medium text-red-500">{{ $message }}</span>
+                        @enderror
+                    </div>
+  
+                    <div class="col-span-2 flex flex-col">
+                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">End date*</label>
+                        <input type="date" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="end_date" id=""/>
+                        @error('deadline')
                         <span class="block text-xs font-medium text-red-500">{{ $message }}</span>
                         @enderror
                     </div>

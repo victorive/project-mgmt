@@ -24,7 +24,6 @@ class ClientController extends Controller
         $client = $request->validate([
             'client' => 'required|string',
             'phone' => 'required',
-            'address' => 'required|string',
             'email' => 'required|email',
         ]);
 

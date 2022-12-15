@@ -27,12 +27,6 @@ class ProjectController extends Controller
         $project = $request->validate([
             'project' => 'required',
             'end_date' => 'required|date',
-            'subtask' => 'required',
-            'stage_one' => 'required',
-            'stage_two' => 'required',
-            'stage_three' => 'required',
-            'stage_four' => 'required',
-            'description' => 'required',
             'start_date' => 'required|date',
             'client_id' => 'required',
         ]);

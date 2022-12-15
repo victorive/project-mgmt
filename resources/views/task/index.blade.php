@@ -21,10 +21,9 @@
           </td>
 
           <td class="whitespace-normal py-4 text-sm font-medium text-gray-800 sm:px-3">Task ID</td>
-          <td class="whitespace-normal py-4 text-sm font-medium text-gray-800 sm:px-3">Task Description</td>
-          <td class="whitespace-normal py-4 text-sm font-medium text-gray-800 sm:px-3">Project</td>
-
-          <td class="whitespace-normal py-4 text-sm font-medium text-gray-800 sm:px-3">Status</td>
+          <td class="whitespace-normal py-4 text-sm font-medium text-gray-800 sm:px-3">Project Name</td>
+          <td class="whitespace-normal py-4 text-sm font-medium text-gray-800 sm:px-3">Start date</td>
+          <td class="whitespace-normal py-4 text-sm font-medium text-gray-800 sm:px-3">End date</td>
           <td class="whitespace-normal py-4 text-sm font-medium text-gray-800 sm:px-3">Actions</td>
         </tr>
       </thead>
@@ -61,15 +60,17 @@
 
           <td class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-600 sm:px-3 lg:table-cell">#{{ $task->id }}</td>
 
-          <td class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-600 sm:px-3 lg:table-cell">{{ $task->description }}</td>
-
           <td class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-600 sm:px-3 lg:table-cell">
             {{ $task->project->project }}
           </td>
 
-        <td class="whitespace-no-wrap hidden py-4 text-left text-sm text-gray-600 sm:px-3 lg:table-cell lg:text-left">
-            <span class="bg-yellow-200 text-yellow-600 py-1 px-3 rounded-full text-xs">In progress</span>    
-        </td>
+          <td class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-600 sm:px-3 lg:table-cell">
+            {{ $task->project->start_date }}
+          </td>
+
+          <td class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-600 sm:px-3 lg:table-cell">
+            {{ $task->project->project }}
+          </td>
 
           <td class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-3 lg:table-cell">
             <div class="flex item-center justify-center">

@@ -25,7 +25,6 @@
           </td>
 
           <td class="whitespace-normal py-4 text-sm font-medium text-gray-800 sm:px-3">Phone</td>
-          <td class="whitespace-normal py-4 text-sm font-medium text-gray-800 sm:px-3">Address</td>
           <td class="whitespace-normal py-4 text-sm font-medium text-gray-800 sm:px-3">Email</td>
           <td class="whitespace-normal py-4 text-sm font-medium text-gray-800 sm:px-3">Actions</td>
         </tr>
@@ -63,8 +62,6 @@
           </td>
 
           <td class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-600 sm:px-3 lg:table-cell">{{ $client->phone }}</td>
-
-          <td class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-600 sm:px-3 lg:table-cell">{{ $client->address }}</td>
 
           <td class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-600 sm:px-3 lg:table-cell">
             {{ $client->email }}

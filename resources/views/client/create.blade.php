@@ -26,15 +26,7 @@
                         @enderror
                     </div>
 
-                    <div class="flex flex-col sm:col-span-3">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Address*</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="address" id="" placeholder="Client Address"/>
-                        @error('address')
-                        <span class="block text-xs font-medium text-red-500">{{ $message }}</span>
-                        @enderror
-                    </div>
-
-                    <div class="col-span-1 flex flex-col">
+                    <div class="col-span-4 flex flex-col">
                         <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Email*</label>
                         <input type="email" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="email" id="" placeholder="Client Email"/>
                         @error('email')

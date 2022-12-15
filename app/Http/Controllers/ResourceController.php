@@ -17,16 +17,13 @@ class ResourceController extends Controller
 
     public function create(){
         
-        return view('resource.create', [
-            'tasks' => Task::all()
-        ]);
+        return view('resource.create');
     }
 
     public function store(Request $request){
 
         $resource = $request->validate([
             'resource' => 'required',
-            'task_id' => 'required',
         ]);
 
         Resource::create($resource);

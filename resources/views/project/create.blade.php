@@ -9,15 +9,23 @@
           <form class="flex w-full flex-col" action="{{ url('/add-project') }}" method="POST">
           @csrf
               <div class="mt-4 grid items-center gap-3 gap-y-5 sm:grid-cols-4">
-                  <div class="flex flex-col sm:col-span-3">
+                  <div class="flex flex-col sm:col-span-4">
                       <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Name*</label>
                       <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="project" id="" placeholder="Project Title"/>
                       @error('project')
                       <span class="block text-xs font-medium text-red-500">{{ $message }}</span>
                       @enderror
                   </div>
+                  
+                  <div class="col-span-2 flex flex-col">
+                      <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Start date*</label>
+                      <input type="date" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="start_date" id=""/>
+                      @error('start_date')
+                      <span class="block text-xs font-medium text-red-500">{{ $message }}</span>
+                      @enderror
+                  </div>
 
-                  <div class="col-span-1 flex flex-col">
+                  <div class="col-span-2 flex flex-col">
                       <label class="mb-1 ml-3 font-semibold text-gray-500" for="">End date*</label>
                       <input type="date" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="end_date" id=""/>
                       @error('deadline')
@@ -25,58 +33,6 @@
                       @enderror
                   </div>
 
-                  <div class="flex flex-col sm:col-span-4">
-                    <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Sub Task</label>
-                    <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="subtask" id="" placeholder="Project Name"/>
-                    @error('subtask')
-                    <span class="block text-xs font-medium text-red-500">{{ $message }}</span>
-                    @enderror
-                  </div>
-
-                  <div class="col-span-1 flex flex-col">
-                    <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Stage 1</label>
-                    <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="stage_one" id=""/>
-                    @error('stage_one')
-                    <span class="block text-xs font-medium text-red-500">{{ $message }}</span>
-                    @enderror
-                  </div>
-                  <div class="col-span-1 flex flex-col">
-                    <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Stage 2</label>
-                    <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="stage_two" id=""/>
-                    @error('stage_two')
-                    <span class="block text-xs font-medium text-red-500">{{ $message }}</span>
-                    @enderror
-                  </div>
-                  <div class="col-span-1 flex flex-col">
-                    <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Stage 3</label>
-                    <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="stage_three" id=""/>
-                    @error('stage_three')
-                    <span class="block text-xs font-medium text-red-500">{{ $message }}</span>
-                    @enderror
-                  </div>
-                  <div class="col-span-1 flex flex-col">
-                    <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Stage 4</label>
-                    <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="stage_four" id=""/>
-                    @error('stage_four')
-                    <span class="block text-xs font-medium text-red-500">{{ $message }}</span>
-                    @enderror
-                  </div>
-  
-                  <div class="col-span-3 flex flex-col">
-                    <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Description</label>
-                    <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="description" id="" placeholder="Project description"/>
-                    @error('description')
-                    <span class="block text-xs font-medium text-red-500">{{ $message }}</span>
-                    @enderror
-                  </div>
-
-                  <div class="col-span-1 flex flex-col">
-                      <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Start date*</label>
-                      <input type="date" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="start_date" id=""/>
-                      @error('start_date')
-                      <span class="block text-xs font-medium text-red-500">{{ $message }}</span>
-                      @enderror
-                  </div>
 
                   <div class="flex flex-col sm:col-span-4">
                     <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Client</label>

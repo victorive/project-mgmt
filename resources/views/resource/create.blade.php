@@ -16,25 +16,6 @@
                         <span class="block text-xs font-medium text-red-500">{{ $message }}</span>
                         @enderror
                     </div>
-
-                    <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Task*</label>
-                        <select class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="task_id" id="">
-                            @if (count($tasks) != 0)
-
-                            @foreach ($tasks as $task)
-                              <option value="{{ $task->id }}">{{ $task->task }}</option>
-                            @endforeach
-      
-                            @else
-                              <option></option>
-                              <option>No tasks yet, create a task first!</option>
-                            @endif
-                        </select>
-                        @error('task')
-                        <span class="block text-xs font-medium text-red-500">{{ $message }}</span>
-                        @enderror
-                    </div>
                 </div>
 
                 <div class="flex flex-col justify-between sm:flex-row">

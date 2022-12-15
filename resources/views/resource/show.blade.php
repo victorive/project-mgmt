@@ -14,13 +14,8 @@
                     </div>
 
                     <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Resource</label>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Resource Name</label>
                         <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $resource->resource }}"/>
-                    </div>
-
-                    <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Task</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $resource->task->task }}"/>
                     </div>
                 </div>
             </div>

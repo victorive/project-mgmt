@@ -24,16 +24,10 @@
             Project
           </td>
 
-          <td class="whitespace-normal py-4 text-sm font-medium text-gray-800 sm:px-3">Description</td>
           <td class="whitespace-normal py-4 text-sm font-medium text-gray-800 sm:px-3">Client</td>
-          <td class="whitespace-normal py-4 text-sm font-medium text-gray-800 sm:px-3">Sub-task</td>
           <td class="whitespace-normal py-4 text-sm font-medium text-gray-800 sm:px-3">Start date</td>
 
           <td class="whitespace-normal py-4 text-sm font-medium text-gray-800 sm:px-3">End date</td>
-          <td class="whitespace-normal py-4 text-sm font-medium text-gray-800 sm:px-3">Stage 1</td>
-          <td class="whitespace-normal py-4 text-sm font-medium text-gray-800 sm:px-3">Stage 2</td>
-          <td class="whitespace-normal py-4 text-sm font-medium text-gray-800 sm:px-3">Stage 3</td>
-          <td class="whitespace-normal py-4 text-sm font-medium text-gray-800 sm:px-3">Stage 4</td>
 
           <td class="whitespace-normal py-4 text-sm font-medium text-gray-800 sm:px-3">Actions</td>
         </tr>
@@ -70,20 +64,12 @@
             </div>
           </td>
 
-          <td class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-600 sm:px-3 lg:table-cell">{{ $project->description }}</td>
-
           <td class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-600 sm:px-3 lg:table-cell">{{ $project->client->client }}</td>
-
-          <td class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-600 sm:px-3 lg:table-cell">{{ $project->subtask }}</td>
 
           <td class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-600 sm:px-3 lg:table-cell">
             {{ $project->start_date }}
           </td>
           <td class="whitespace-no-wrap hidden py-4 text-left text-sm text-gray-600 sm:px-3 lg:table-cell lg:text-left">{{ $project->end_date }}</td>
-          <td class="whitespace-no-wrap hidden py-4 text-left text-sm text-gray-600 sm:px-3 lg:table-cell lg:text-left">{{ $project->stage_one }}</td>
-          <td class="whitespace-no-wrap hidden py-4 text-left text-sm text-gray-600 sm:px-3 lg:table-cell lg:text-left">{{ $project->stage_two }}</td>
-          <td class="whitespace-no-wrap hidden py-4 text-left text-sm text-gray-600 sm:px-3 lg:table-cell lg:text-left">{{ $project->stage_three }}</td>
-          <td class="whitespace-no-wrap hidden py-4 text-left text-sm text-gray-600 sm:px-3 lg:table-cell lg:text-left">{{ $project->stage_four }}</td>
           
 
           <td class="whitespace-no-wrap hidden py-4 text-sm font-normal text-gray-500 sm:px-3 lg:table-cell">

@@ -14,7 +14,7 @@
                     </div>
 
                     <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Client</label>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Name</label>
                         <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $client->client }}"/>
                     </div>
 
@@ -24,12 +24,7 @@
                     </div>
 
                     <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Address</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $client->address }}"/>
-                    </div>
-
-                    <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Email</label>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Email Address</label>
                         <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $client->email }}"/>
                     </div>
                 </div>

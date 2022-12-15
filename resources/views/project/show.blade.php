@@ -14,13 +14,8 @@
                     </div>
 
                     <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Project</label>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Project Name</label>
                         <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $project->project }}"/>
-                    </div>
-
-                    <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Description</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $project->description }}"/>
                     </div>
 
                     <div class="flex flex-col sm:col-span-2">
@@ -31,31 +26,6 @@
                     <div class="flex flex-col sm:col-span-2">
                         <label class="mb-1 ml-3 font-semibold text-gray-500" for="">End date</label>
                         <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $project->end_date }}"/>
-                    </div>
-
-                    <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Subtask</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $project->subtask }}"/>
-                    </div>
-
-                    <div class="flex flex-col sm:col-span-1">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Stage 1</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $project->stage_one }}"/>
-                    </div>
-
-                    <div class="flex flex-col sm:col-span-1">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Stage 2</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $project->stage_two }}"/>
-                    </div>
-
-                    <div class="flex flex-col sm:col-span-1">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Stage 3</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $project->stage_three }}"/>
-                    </div>
-
-                    <div class="flex flex-col sm:col-span-1">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Stage 4</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $project->stage_four }}"/>
                     </div>
 
                     <div class="flex flex-col sm:col-span-4">
