@@ -44,15 +44,21 @@ class ProjectController extends Controller
         ]);
     }
 
-    public function edit(){
+    public function edit(Project $project){
         
+        return view('project.edit', [
+            'project' => $project
+        ]);
     }
 
     public function update(){
         
     }
 
-    public function destroy(){
+    public function destroy(Project $project){
         
+        Project::where('id', $project->id)->delete();
+
+        return redirect('/projects')->with('success', 'Project deleted!');
     }
 }

@@ -37,26 +37,51 @@ Route::middleware(['auth'])->group(function(){
     Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
     Route::get('/home', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/profile', [DashboardController::class, 'profile'])->name('profile');
     
-    Route::get('/clients', [ClientController::class, 'index'])->name('clients');
-    Route::get('/add-client', [ClientController::class, 'create'])->name('add-client');
-    Route::post('/add-client', [ClientController::class, 'store']);
-    Route::get('/client/{client}', [ClientController::class, 'show']);
-    
-    Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
-    Route::get('/add-project', [ProjectController::class, 'create'])->name('add-project');
-    Route::post('/add-project', [ProjectController::class, 'store']);
-    Route::get('/project/{project}', [ProjectController::class, 'show']);
-    
-    Route::get('/tasks', [TaskController::class, 'index'])->name('tasks');
-    Route::get('/add-task', [TaskController::class, 'create'])->name('add-task');
-    Route::post('/add-task', [TaskController::class, 'store']);
-    Route::get('/task/{task}', [TaskController::class, 'show']);
-    
-    Route::get('/resources', [ResourceController::class, 'index'])->name('resources');
-    Route::get('/add-resource', [ResourceController::class, 'create'])->name('add-resource');
-    Route::post('/add-resource', [ResourceController::class, 'store']);
-    Route::get('/resource/{resource}', [ResourceController::class, 'show']);
+    Route::controller(ClientController::class)->group(function() {
 
+        Route::get('/clients', 'index')->name('clients');
+        Route::get('/clients/create', 'create');
+        Route::post('/clients', 'store');
+        Route::get('/client/edit/{client}', 'edit');
+        Route::put('/client/{client}', 'update');
+        Route::delete('/client/{client}', 'destroy');
+        Route::get('/client/{client}', 'show');
+    });
+
+    Route::controller(ProjectController::class)->group(function() {
+
+        Route::get('/projects', 'index')->name('projects');
+        Route::get('/projects/create', 'create');
+        Route::post('/projects', 'store');
+        Route::get('/project/edit/{project}', 'edit');
+        Route::put('/project/{project}', 'update');
+        Route::delete('/project/{project}', 'destroy');
+        Route::get('/project/{project}', 'show');
+    });
+    
+    Route::controller(TaskController::class)->group(function() {
+
+        Route::get('/tasks', 'index')->name('tasks');
+        Route::get('/tasks/create', 'create');
+        Route::post('/tasks', 'store');
+        Route::get('/task/edit/{task}', 'edit');
+        Route::get('/task/{task}', 'update');
+        Route::delete('/task/{task}', 'destroy');
+        Route::get('/task/{task}', 'show');
+    });
+
+    Route::controller(ResourceController::class)->group(function() {
+
+        Route::get('/resources','index')->name('resources');
+        Route::get('/resources/create', 'create');
+        Route::post('/resources', 'store');
+        Route::get('/resource/edit/{resource}', 'edit');
+        Route::get('/resource/{resource}', 'update');
+        Route::delete('/resource/{resource}', 'destroy');
+        Route::get('/resource/{resource}', 'show');
+    });
+    
     Route::get('/reports', [ReportController::class, 'index'])->name('reports');
 });

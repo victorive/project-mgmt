@@ -1,25 +1,25 @@
 @extends('layouts.user')
-@section('title', 'Add a task')
+@section('title', 'Add task')
 @section('content')
 
 <div class="py-6 px-4">
     <div class="w-full">
         <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
             <h3 class="text-2xl leading-none font-semibold text-gray-900 mb-10">Add a task</h3>            
-            <form class="flex w-full flex-col" action="{{ url('/add-task') }}" method="POST">
+            <form class="flex w-full flex-col" action="{{ url('/tasks') }}" method="POST">
             @csrf
                 <div class="mt-4 grid items-center gap-3 gap-y-5 sm:grid-cols-4">
                     <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Task*</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="task" id="" placeholder="Task"/>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">Task*</label>
+                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="task" placeholder="Task"/>
                         @error('task')
                         <span class="block text-xs font-medium text-red-500">{{ $message }}</span>
                         @enderror
                     </div>
 
                     <div class="flex flex-col sm:col-span-3">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Project Name*</label>
-                        <select class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="project_id" id="">
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">Project Name*</label>
+                        <select class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="project_id">
                             @if (count($projects) != 0)
 
                             @foreach ($projects as $project)
@@ -38,16 +38,16 @@
                     </div>
 
                     <div class="col-span-2 flex flex-col">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Start date*</label>
-                        <input type="date" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="start_date" id=""/>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">Start date*</label>
+                        <input type="date" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="start_date"/>
                         @error('start_date')
                         <span class="block text-xs font-medium text-red-500">{{ $message }}</span>
                         @enderror
                     </div>
   
                     <div class="col-span-2 flex flex-col">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">End date*</label>
-                        <input type="date" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="end_date" id=""/>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">End date*</label>
+                        <input type="date" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="end_date"/>
                         @error('deadline')
                         <span class="block text-xs font-medium text-red-500">{{ $message }}</span>
                         @enderror

@@ -1,5 +1,5 @@
 @extends('layouts.user')
-@section('title', 'Task')
+@section('title', 'View Task')
 @section('content')
 
 <div class="py-6 px-4">
@@ -9,33 +9,33 @@
             <div class="flex w-full flex-col">
                 <div class="mt-4 grid items-center gap-3 gap-y-5 sm:grid-cols-4">
                     <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Task ID</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="#{{ $task->id }}"/>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">Task ID</label>
+                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" disabled value="#{{ $task->id }}"/>
                     </div>
 
                     <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Task</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $task->task }}"/>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">Task</label>
+                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" disabled value="{{ $task->task }}"/>
                     </div>
 
                     <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Project ID</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $task->project->id }}"/>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">Project ID</label>
+                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" disabled value="{{ $task->project->id }}"/>
                     </div>
 
                     <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Project Name</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $task->project->project }}"/>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">Project Name</label>
+                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" disabled value="{{ $task->project->project }}"/>
                     </div>
 
                     <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Start date</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $task->start_date }}"/>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">Start date</label>
+                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" disabled value="{{ $task->start_date }}"/>
                     </div>
 
                     <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">End date</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $task->end_date }}"/>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">End date</label>
+                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" disabled value="{{ $task->end_date }}"/>
                     </div>
                 </div>
             </div>

@@ -1,5 +1,5 @@
 @extends('layouts.user')
-@section('title', 'Project')
+@section('title', 'View project')
 @section('content')
 
 <div class="py-6 px-4">
@@ -9,28 +9,28 @@
             <div class="flex w-full flex-col">
                 <div class="mt-4 grid items-center gap-3 gap-y-5 sm:grid-cols-4">
                     <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Project ID</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="#{{ $project->id }}"/>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">Project ID</label>
+                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" disabled value="#{{ $project->id }}"/>
                     </div>
 
                     <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Project Name</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $project->project }}"/>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">Project Name</label>
+                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" disabled value="{{ $project->project }}"/>
                     </div>
 
                     <div class="flex flex-col sm:col-span-2">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Start date</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $project->start_date }}"/>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">Start date</label>
+                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" disabled value="{{ $project->start_date }}"/>
                     </div>
 
                     <div class="flex flex-col sm:col-span-2">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">End date</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $project->end_date }}"/>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">End date</label>
+                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" disabled value="{{ $project->end_date }}"/>
                     </div>
 
                     <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Client</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $project->client->client }}"/>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">Client</label>
+                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" disabled value="{{ $project->client->client }}"/>
                     </div>
                 </div>
             </div>

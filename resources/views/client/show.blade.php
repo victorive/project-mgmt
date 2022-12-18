@@ -1,5 +1,5 @@
 @extends('layouts.user')
-@section('title', 'Task')
+@section('title', 'View client')
 @section('content')
 
 <div class="py-6 px-4">
@@ -9,23 +9,23 @@
             <div class="flex w-full flex-col">
                 <div class="mt-4 grid items-center gap-3 gap-y-5 sm:grid-cols-4">
                     <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Client ID</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="#{{ $client->id }}"/>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">Client ID</label>
+                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" disabled value="#{{ $client->id }}"/>
                     </div>
 
                     <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Name</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $client->client }}"/>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">Name</label>
+                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" disabled value="{{ $client->client }}"/>
                     </div>
 
                     <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Phone</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $client->phone }}"/>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">Phone</label>
+                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" disabled value="{{ $client->phone }}"/>
                     </div>
 
                     <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500" for="">Email Address</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" id="" disabled value="{{ $client->email }}"/>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">Email Address</label>
+                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" disabled value="{{ $client->email }}"/>
                     </div>
                 </div>
             </div>

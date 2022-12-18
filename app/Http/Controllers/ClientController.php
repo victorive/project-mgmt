@@ -39,15 +39,21 @@ class ClientController extends Controller
         ]);
     }
 
-    public function edit(){
+    public function edit(Client $client){
         
+        return view('client.edit', [
+            'client' => $client
+        ]);
     }
 
     public function update(){
         
     }
 
-    public function destroy(){
+    public function destroy(Client $client){
         
+        Client::where('id', $client->id)->delete();
+
+        return redirect('/clients')->with('success', 'Client deleted!');
     }
 }

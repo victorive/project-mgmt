@@ -12,8 +12,11 @@ class DashboardController extends Controller
     {
         $user_id = Auth::id();
 
-        return view('user.dashboard', [
-           
-        ]);
+        return view('user.dashboard');
+    }
+
+    public function profile()
+    {
+        return view('user.profile');
     }
 }

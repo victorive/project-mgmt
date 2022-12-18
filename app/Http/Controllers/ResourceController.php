@@ -39,16 +39,21 @@ class ResourceController extends Controller
         ]);
     }
 
-    public function edit(){
+    public function edit(Resource $resource){
         
+        return view('resource.edit', [
+            'resource' => $resource
+        ]);
     }
 
     public function update(){
         
     }
 
-    public function destroy(){
+    public function destroy(Resource $resource){
         
+        Resource::where('id', $resource->id)->delete();
+
+        return redirect('/resources')->with('success', 'Resource deleted!');
     }
-    //
 }

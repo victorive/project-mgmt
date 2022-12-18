@@ -33,7 +33,7 @@ class TaskController extends Controller
 
         Task::create($task);
 
-        return redirect('/tasks')->with('message', 'Task created!');
+        return redirect('/tasks')->with('success', 'Task created!');
     }
 
     public function show(Task $task){
@@ -43,15 +43,21 @@ class TaskController extends Controller
         ]);
     }
 
-    public function edit(){
-        
+    public function edit(Task $task){
+
+        return view('task.edit', [
+            'task' => $task
+        ]);
     }
 
     public function update(){
         
     }
 
-    public function destroy(){
+    public function destroy(Task $task){
         
+        Task::where('id', $task->id)->delete();
+
+        return redirect('/tasks')->with('success', 'Task deleted!');
     }
 }
