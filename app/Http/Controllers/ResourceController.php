@@ -29,7 +29,6 @@ class ResourceController extends Controller
         Resource::create($resource);
 
         return redirect('/resources')->with('success', 'Resource created!');
-
     }
 
     public function show(Resource $resource){
@@ -46,8 +45,15 @@ class ResourceController extends Controller
         ]);
     }
 
-    public function update(){
+    public function update(Request $request, Resource $resource){
         
+        $formFields = $request->validate([
+            'resource' => 'required',
+        ]);
+
+        $resource->update($formFields);
+
+        return redirect('/resources')->with('success', 'Resource updated!');
     }
 
     public function destroy(Resource $resource){

@@ -26,15 +26,14 @@ class ProjectController extends Controller
 
         $project = $request->validate([
             'project' => 'required',
-            'end_date' => 'required|date',
             'start_date' => 'required|date',
+            'end_date' => 'required|date',
             'client_id' => 'required',
         ]);
 
         Project::create($project);
 
         return redirect('/projects')->with('success', 'Project created!');
-
     }
 
     public function show(Project $project){
@@ -47,12 +46,23 @@ class ProjectController extends Controller
     public function edit(Project $project){
         
         return view('project.edit', [
-            'project' => $project
+            'project' => $project,
+            'clients' => Client::all()
         ]);
     }
 
-    public function update(){
+    public function update(Request $request, Project $project){
         
+        $formFields = $request->validate([
+            'project' => 'required',
+            'start_date' => 'required|date',
+            'end_date' => 'required|date',
+            'client_id' => 'required',
+        ]);
+
+       $project->update($formFields);
+
+        return redirect('/projects')->with('success', 'Project updated!');
     }
 
     public function destroy(Project $project){

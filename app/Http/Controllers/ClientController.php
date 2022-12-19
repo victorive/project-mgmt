@@ -46,8 +46,17 @@ class ClientController extends Controller
         ]);
     }
 
-    public function update(){
+    public function update(Request $request, Client $client){
         
+        $formFields = $request->validate([
+            'client' => 'required|string',
+            'phone' => 'required',
+            'email' => 'required|email',
+        ]);
+
+       $client->update($formFields);
+
+        return redirect('/clients')->with('success', 'Client updated!');
     }
 
     public function destroy(Client $client){

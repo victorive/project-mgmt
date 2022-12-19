@@ -44,10 +44,10 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/clients', 'index')->name('clients');
         Route::get('/clients/create', 'create');
         Route::post('/clients', 'store');
-        Route::get('/client/edit/{client}', 'edit');
-        Route::put('/client/{client}', 'update');
-        Route::delete('/client/{client}', 'destroy');
-        Route::get('/client/{client}', 'show');
+        Route::get('/clients/edit/{client}', 'edit');
+        Route::put('/clients/{client}', 'update');
+        Route::delete('/clients/{client}', 'destroy');
+        Route::get('/clients/{client}', 'show');
     });
 
     Route::controller(ProjectController::class)->group(function() {
@@ -55,10 +55,10 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/projects', 'index')->name('projects');
         Route::get('/projects/create', 'create');
         Route::post('/projects', 'store');
-        Route::get('/project/edit/{project}', 'edit');
-        Route::put('/project/{project}', 'update');
-        Route::delete('/project/{project}', 'destroy');
-        Route::get('/project/{project}', 'show');
+        Route::get('/projects/edit/{project}', 'edit');
+        Route::put('/projects/{project}', 'update');
+        Route::delete('/projects/{project}', 'destroy');
+        Route::get('/projects/{project}', 'show');
     });
     
     Route::controller(TaskController::class)->group(function() {
@@ -66,10 +66,10 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/tasks', 'index')->name('tasks');
         Route::get('/tasks/create', 'create');
         Route::post('/tasks', 'store');
-        Route::get('/task/edit/{task}', 'edit');
-        Route::get('/task/{task}', 'update');
-        Route::delete('/task/{task}', 'destroy');
-        Route::get('/task/{task}', 'show');
+        Route::get('/tasks/edit/{task}', 'edit');
+        Route::put('/tasks/{task}', 'update');
+        Route::delete('/tasks/{task}', 'destroy');
+        Route::get('/tasks/{task}', 'show');
     });
 
     Route::controller(ResourceController::class)->group(function() {
@@ -77,10 +77,10 @@ Route::middleware(['auth'])->group(function(){
         Route::get('/resources','index')->name('resources');
         Route::get('/resources/create', 'create');
         Route::post('/resources', 'store');
-        Route::get('/resource/edit/{resource}', 'edit');
-        Route::get('/resource/{resource}', 'update');
-        Route::delete('/resource/{resource}', 'destroy');
-        Route::get('/resource/{resource}', 'show');
+        Route::get('/resources/edit/{resource}', 'edit');
+        Route::put('/resources/{resource}', 'update');
+        Route::delete('/resources/{resource}', 'destroy');
+        Route::get('/resources/{resource}', 'show');
     });
     
     Route::get('/reports', [ReportController::class, 'index'])->name('reports');

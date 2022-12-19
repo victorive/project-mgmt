@@ -46,12 +46,23 @@ class TaskController extends Controller
     public function edit(Task $task){
 
         return view('task.edit', [
-            'task' => $task
+            'task' => $task,
+            'projects' => Project::all()
         ]);
     }
 
-    public function update(){
+    public function update(Request $request, Task $task){
         
+        $formFields = $request->validate([
+            'task' => 'required',
+            'start_date' => 'required',
+            'end_date' => 'required',
+            'project_id' => 'required',
+        ]);
+
+        $task->update($formFields);
+
+        return redirect('/tasks')->with('success', 'Task updated!');
     }
 
     public function destroy(Task $task){

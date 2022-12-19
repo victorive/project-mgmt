@@ -5,12 +5,12 @@
 <div class="py-6 px-4">
     <div class="w-full">
         <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
-            <h3 class="text-2xl leading-none font-semibold text-gray-900 mb-10">Add a resource</h3>
+            <h3 class="text-2xl leading-none font-semibold text-gray-900 mb-10">Add resource</h3>
             <form class="flex w-full flex-col" action="{{ url('/resources') }}" method="POST">
             @csrf
                 <div class="mt-4 grid items-center gap-3 gap-y-5 sm:grid-cols-4">
                     <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500">Resource*</label>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">Resource</label>
                         <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" placeholder="Resource Name"/>
                         @error('resource')
                         <span class="block text-xs font-medium text-red-500">{{ $message }}</span>

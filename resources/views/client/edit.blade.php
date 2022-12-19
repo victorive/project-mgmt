@@ -6,28 +6,33 @@
     <div class="w-full">
         <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
             <h3 class="text-2xl leading-none font-semibold text-gray-900 mb-10">Edit Client #{{ $client->id }}</h3>
-            <form class="flex w-full flex-col" action="{{ url('/add-client') }}" method="POST">
+            <form class="flex w-full flex-col" action="{{ url('/clients', $client->id) }}" method="POST">
             @csrf
+            @method('PUT')
 
                 <div class="mt-4 grid items-center gap-3 gap-y-5 sm:grid-cols-4">
                     <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500">Client ID</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" value="#{{ $client->id }}"/>
-                    </div>
-
-                    <div class="flex flex-col sm:col-span-4">
                         <label class="mb-1 ml-3 font-semibold text-gray-500">Name</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" value="{{ $client->client }}"/>
+                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="client" value="{{ $client->client }}"/>
+                        @error('client')
+                        <span class="block text-xs font-medium text-red-500">{{ $message }}</span>
+                        @enderror
                     </div>
 
                     <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500">Phone</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" value="{{ $client->phone }}"/>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">Phone No</label>
+                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="phone" value="{{ $client->phone }}"/>
+                        @error('phone')
+                        <span class="block text-xs font-medium text-red-500">{{ $message }}</span>
+                        @enderror
                     </div>
 
                     <div class="flex flex-col sm:col-span-4">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500">Email Address</label>
-                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="resource" value="{{ $client->email }}"/>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">Email</label>
+                        <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="email" value="{{ $client->email }}"/>
+                        @error('email')
+                        <span class="block text-xs font-medium text-red-500">{{ $message }}</span>
+                        @enderror
                     </div>
                 </div>
 

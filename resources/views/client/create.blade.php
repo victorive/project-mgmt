@@ -5,13 +5,13 @@
 <div class="py-6 px-4">
     <div class="w-full">
         <div class="bg-white shadow rounded-lg p-4 sm:p-6 xl:p-8 ">
-            <h3 class="text-2xl leading-none font-semibold text-gray-900 mb-10">Add a client</h3>
+            <h3 class="text-2xl leading-none font-semibold text-gray-900 mb-10">Add client</h3>
             <form class="flex w-full flex-col" action="{{ url('/clients') }}" method="POST">
             @csrf
 
                 <div class="mt-4 grid items-center gap-3 gap-y-5 sm:grid-cols-4">
                     <div class="flex flex-col sm:col-span-3">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500">Name*</label>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">Name</label>
                         <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="client" placeholder="Client Name"/>
                         @error('client')
                         <span class="block text-xs font-medium text-red-500">{{ $message }}</span>
@@ -19,7 +19,7 @@
                     </div>
 
                     <div class="col-span-1 flex flex-col">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500">Phone No*</label>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">Phone No</label>
                         <input type="text" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="phone" placeholder="Phone no"/>
                         @error('phone')
                         <span class="block text-xs font-medium text-red-500">{{ $message }}</span>
@@ -27,7 +27,7 @@
                     </div>
 
                     <div class="col-span-4 flex flex-col">
-                        <label class="mb-1 ml-3 font-semibold text-gray-500">Email*</label>
+                        <label class="mb-1 ml-3 font-semibold text-gray-500">Email</label>
                         <input type="email" class="rounded-lg border px-2 py-2 shadow-sm outline-none focus:ring" name="email" placeholder="Client Email"/>
                         @error('email')
                         <span class="block text-xs font-medium text-red-500">{{ $message }}</span>
